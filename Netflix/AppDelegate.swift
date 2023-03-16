@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
 
-    lazy var persistentContainer: NSPersistentContainer = {
+    lazy var persistentContainer: NSPersistentContainer = { //where database store the data (variable holding
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext () { //context manager -- manager who's responsible for taking the data from us comitting those changes , inserting data inside the database
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
